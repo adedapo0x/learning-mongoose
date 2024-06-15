@@ -11,9 +11,8 @@ router.get('/books', async (req, res) => {
 
 router.post('/newbook', async(req, res) => {
     const newBook = new Book(req.body)
-    const savedBook = await Book.save(newBook)
+    const savedBook = await newBook.save()
     res.json(savedBook)
-
 })
 
 module.exports = router
