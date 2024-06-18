@@ -5,8 +5,8 @@ const Book = require('./models/book.models')
 
 
 router.get('/books', async (req, res) => {
-    // const allBooks = await Book.find({})
-    // res.json({"message": "Data fetched successfully", data : allBooks})
+    const allBooks = await Book.find({})
+    res.json({"message": "Data fetched successfully", data : allBooks})
 })
 
 router.post('/newbook', async(req, res) => {
